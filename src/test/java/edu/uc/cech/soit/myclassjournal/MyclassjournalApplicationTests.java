@@ -4,6 +4,7 @@ import edu.uc.cech.soit.myclassjournal.dto.JournalEntry;
 import edu.uc.cech.soit.myclassjournal.service.IJournalService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.List;
@@ -12,8 +13,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @SpringBootTest
-class MyclassjournalApplicationTests {
+class myClassJournalApplicationTests {
 
+    @Qualifier("IJournalService")
     @Autowired
     IJournalService journalService;
 
@@ -41,7 +43,7 @@ class MyclassjournalApplicationTests {
      * Validate that the JournalService can save and return Journal Entries.
      */
     @Test
-    void verifyAddAndRemoveJournalEntries() {
+    void verifyAddAndRemoveJournalEntries() throws Exception {
         String notes =  "My first entry!";
         String date = "October 2021";
 
