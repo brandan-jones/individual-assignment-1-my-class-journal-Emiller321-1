@@ -43,7 +43,7 @@ class myClassJournalApplicationTests {
      * Validate that the JournalService can save and return Journal Entries.
      */
     @Test
-    void verifyAddAndRemoveJournalEntries() throws Exception {
+    void verifyAddAndRemoveJournalEntries() {
         String notes =  "My first entry!";
         String date = "October 2021";
 

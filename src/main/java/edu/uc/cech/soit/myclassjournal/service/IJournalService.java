@@ -15,10 +15,7 @@ public interface IJournalService {
      * @param journalEntry the entry to save.
      */
 
-    JournalEntry fetchByJournalEntry(int journalEntry);
-    void delete(int journalEntry) throws Exception;
-
-    JournalEntry save(JournalEntry journalEntry) throws Exception;
+    void save(JournalEntry journalEntry);
 
     /**
      * Return all journal entries.
